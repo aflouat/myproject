@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.openclassrooms</groupId>
-	<artifactId>mdd-api</artifactId>
+	<groupId>fr.tmsconsult</groupId>
+	<artifactId>myproject</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mdd-backend</name>
-	<description>MVP project for MDD : Monde De Developpement</description>
+	<name>myproject-backend</name>
+	<description>MyProject : new tool to make it easy the manage software projects</description>
 	<licenses>
 		<license>
 			<name>GPL</name>
@@ -29,12 +29,12 @@
 		<connection/>
 		<developerConnection/>
 		<tag/>
-		<url>https://github.com/aflouat/P6-MDD-MVP-une-application-full-stack.git</url>
+		<url>https://github.com/aflouat/myproject</url>
 	</scm>
 	<properties>
 		<java.version>22</java.version>
 		<dep.junit.version>5.11.3</dep.junit.version>
-		<moquito.version>5.14.2</moquito.version>
+		<moquito.version>5.16.1</moquito.version>
 		<maven.compiler.source>22</maven.compiler.source>
 		<maven.compiler.target>22</maven.compiler.target>
 
@@ -220,7 +220,10 @@
 						<!-- Exclut toutes les classes DTO -->
 						<exclude>**/dto/**</exclude>
 						<exclude>**/payload/**</exclude>
-						<exclude>**/models/**</exclude>
+						<exclude>**/model/**</exclude>
+						<exclude>**/exception/**</exclude>
+						<exclude>**/controller/**</exclude>
+
 
 
 
@@ -264,7 +267,7 @@
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<!--minimum>0.05</minimum>-->
+											<minimum>3</minimum>
 										</limit>
 									</limits>
 								</rule>

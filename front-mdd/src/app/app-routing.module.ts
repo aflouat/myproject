@@ -7,6 +7,7 @@ import { AuthGuard } from './guards/auth.guard';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' }, // Route par défaut
+
     { path: 'home',     canActivate: [UnauthGuard],
         component: HomeComponent },
     { path: 'auth',    
@@ -17,8 +18,22 @@ export const routes: Routes = [
         { 
             path:'post', canActivate:[AuthGuard],
             loadChildren:() => import('./features/post/post.module').then(m =>m.PostModule)
+        },
+           { 
+            path:'project', canActivate:[AuthGuard],
+            loadChildren:() => import('./features/project/project.module').then(m =>m.ProjectModule)
+        },
+        
+           { 
+            path:'setting', canActivate:[AuthGuard],
+            loadChildren:() => import('./features/setting/setting.module').then(m =>m.SettingModule)
         }
-
+        ,
+        
+        { 
+         path:'task', canActivate:[AuthGuard],
+         loadChildren:() => import('./features/task/task.module').then(m =>m.TaskModule)
+     }
 
 
 ];

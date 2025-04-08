@@ -3,10 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 
-import { AbstractControl, FormsModule, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
-import { Router } from '@angular/router';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from '../../app-routing.module';
+import { AbstractControl, ReactiveFormsModule, ValidationErrors } from '@angular/forms';
 import { AuthRoutingModule } from './auth-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { TopicModule } from '../topic/topic.module';

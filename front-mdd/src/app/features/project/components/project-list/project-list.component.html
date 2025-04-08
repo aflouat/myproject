@@ -1,0 +1,7 @@
+<p>project-list works!</p>
+<ul>
+  <li *ngFor="let project of projects">
+    <a [routerLink]="['#', project.id]">{{ project.name }}</a>
+  </li>
+</ul>
+<p *ngIf="!projects.length">Aucun projet trouvé.</p>
